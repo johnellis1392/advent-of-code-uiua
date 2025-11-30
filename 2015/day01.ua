@@ -1,8 +1,6 @@
 Year ← "2015"
 Day  ← "01"
 
-# TakeWhile =^ 
-
 # Part 1
 PartOne ← /+-1×2="("
 

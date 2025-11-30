@@ -1,5 +1,5 @@
 # Experimental!
-Day ~ "2015/day02.ua" ~ Day PartOne PartTwo Year
+Day ~ "2015/day05.ua" ~ Day PartOne PartTwo Year
 
 SessionId     ← &var "SESSION_ID"
 InputURLFor   ← |2 $"https://adventofcode.com/_/day/_/input" ⊓∘⋕
@@ -7,7 +7,7 @@ FetchInputFor ← |3 (⋅⊙⋅)&runc ⊂⊓([□"curl" □∘]|[□"-H" □∘]
 InputFileFor  ← |2 $"./input/_/day_.input.txt"
 SaveInputFor  ← |3.0 &fwa⊃(InputFileFor⊙⊙⋅|FetchInputFor⊙⊙⊙)
 ReadInput ← |0 (
-  ⨬(SaveInputFor Year Day SessionId|&p "Else Case") (&fe InputFileFor Year Day)
+  ⨬(SaveInputFor Year Day SessionId|) (&fe InputFileFor Year Day)
   &fras InputFileFor Year Day
 )
 
