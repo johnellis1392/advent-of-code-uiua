@@ -1,5 +1,5 @@
 # Experimental!
-Day ~ "2015/day05.ua" ~ Day PartOne PartTwo Year
+Day ~ "2015/day06.ua" ~ Day PartOne PartTwo Year
 
 SessionId     ← &var "SESSION_ID"
 InputURLFor   ← |2 $"https://adventofcode.com/_/day/_/input" ⊓∘⋕
