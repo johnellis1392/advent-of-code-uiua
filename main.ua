@@ -1,20 +1,22 @@
 # Experimental!
-Day ~ "2015/day06.ua" ~ Day PartOne PartTwo Year
+Day ~ "2025/day02.ua" ~ Day PartOne PartTwo Year
+Util ~ "util.ua" ~ Time!
 
 SessionId     ← &var "SESSION_ID"
 InputURLFor   ← |2 $"https://adventofcode.com/_/day/_/input" ⊓∘⋕
 FetchInputFor ← |3 (⋅⊙⋅)&runc ⊂⊓([□"curl" □∘]|[□"-H" □∘]) ⊃(InputURLFor⊙⊙⋅|$"Cookie: session=_" ⋅⋅⊙)
 InputFileFor  ← |2 $"./input/_/day_.input.txt"
-SaveInputFor  ← |3.0 &fwa⊃(InputFileFor⊙⊙⋅|FetchInputFor⊙⊙⊙)
+InputDirFor   ← |1 $"./input/_"
+SaveInputFor  ← |3.0 &fwa⊃(InputFileFor⊙⊙◌|FetchInputFor⊙⊙∘|&fmd InputDirFor⊙⋅◌)
 ReadInput ← |0 (
   ⨬(SaveInputFor Year Day SessionId|) (&fe InputFileFor Year Day)
   &fras InputFileFor Year Day
 )
 
 Input ← ReadInput
-
-PartOne Input
-$"_, Day _, Part 1: _" Year Day
+# PartOne Input
+# Time!(PartOne Input)
+# $"_, Day _, Part 1: _" Year Day
 
 PartTwo Input
 $"_, Day _, Part 2: _" Year Day
