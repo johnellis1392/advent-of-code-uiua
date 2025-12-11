@@ -1,5 +1,5 @@
 # Experimental!
-Day ~ "2025/day04.ua" ~ Day PartOne PartTwo Year
+Day ~ "2025/day06.ua" ~ Day PartOne PartTwo Year
 Util ~ "util.ua" ~ Time!
 
 SessionId     ← &var "SESSION_ID"
@@ -15,7 +15,7 @@ ReadInput ← |0 (
 
 Input ← ReadInput
 PartOne Input
-$"_, Day _, Part 1: _" Year Day
+&p $"_, Day _, Part 1: _" Year Day
 
 PartTwo Input
-$"_, Day _, Part 2: _" Year Day
+&p $"_, Day _, Part 2: _" Year Day
